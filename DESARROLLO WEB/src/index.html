@@ -12,7 +12,6 @@
     <div class="video-background">
         <video autoplay muted loop playsinline>
             <source src="img/vi2.mp4" type="video/mp4">
-            Tu navegador no soporta el video de fondo.
         </video>
     </div>
     <header>
@@ -58,21 +57,86 @@
                 <li class="dropdown-menu">
                     <a href="#">Categorías <i class="fas fa-chevron-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="#" data-category="laptops">Laptops</a></li>
-                        <li><a href="#" data-category="celulares">Celulares</a></li>
-                        <li><a href="#" data-category="accesorios">Accesorios</a></li>
-                        <li><a href="#" data-category="audio">Audio</a></li>
-                        <li><a href="#" data-category="monitores">Monitores</a></li>
+                      <li><a href="#productos" data-category="Laptops" class="scroll-link">Laptops</a></li>
+                      <li><a href="#productos" data-category="celulares" class="scroll-link">celulares</a></li>
+                      <li><a href="#productos" data-category="accesorios" class="scroll-link">accesorios</a></li>
+                      <li><a href="#productos" data-category="audio" class="scroll-link">Audio</a></li>
+                      <li><a href="#productos" data-category="Monitores" class="scroll-link">Monitores</a></li>
                     </ul>
                 </li>
                 <li><a href="#contacto">Soporte</a></li>
             </ul>
         </nav>
     </header>
+ 
+    <section class="hero-slider-container">
+    <div class="slider-wrapper">
 
-    <main>
+        <div class="slider-slide active" style="background-image: url('imagenes/fondo_telefonia_bg.jpg'); background-color: #2262647c;">
+            <div class="slide-content">
+                <p class="slide-subtitle">LO MEJOR DE</p>
+                <h2 class="slide-title">TELEFONÍA</h2>
+                <div class="slide-logos-container">
+                    <img src="img/APPLE.png" alt="Apple Logo">
+                    <img src="img/SAMMSUNG.png" alt="Samsung Logo">
+                    <img src="img/XIOMI.png" alt="Xiaomi Logo">
+                </div>
+                <button class="slide-button">ELIGE EL TUYO</button>
+            </div>
+            
+            <div class="slide-image-mockup">
+                <img src="img/PUBLICIDAD1.png" alt="Mockup de Teléfonos">
+            </div>
+        </div>
+
+        <div class="slider-slide" style="background-image: url('imagenes/fondo_tvs_bg.jpg'); background-color: #2262647c;">
+            <div class="slide-content">
+                <p class="slide-subtitle">RENUEVA TU HOGAR CON</p>
+                <h2 class="slide-title">LO MEJOR EN TV'S</h2>
+                <div class="slide-logos-container">
+                    <img src="img/SAMMSUNG.png" alt="Samsung Logo">
+                    <img src="img/XIOMI.png" alt="Xiaomi Logo">
+                    <img src="img/LG.png" alt="LG Logo">
+                </div>
+                <button class="slide-button">ELIGE EL TUYO</button>
+            </div>
+            <div class="slide-image-mockup">
+                 <img src="img/PUBLICIDAD3.png" alt="Mockup de Televisores">
+            </div>
+        </div>
+
+        <div class="slider-slide" style="background-image: url('imagenes/fondo_laptops_bg.jpg'); background-color: #2262647c;">
+            <div class="slide-content">
+                <p class="slide-subtitle">GRANDES DESCUENTOS EN</p>
+                <h2 class="slide-title">LAPTOPS</h2>
+                <div class="slide-logos-container">
+                    <img src="img/HP.png" alt="HP Logo">
+                    <img src="img/LENOVO.png" alt="Lenovo Logo">
+                    <img src="img/DELL.png" alt="Dell Logo">
+                </div>
+                <button class="slide-button">DESCÚBRELAS</button>
+            </div>
+            <div class="slide-image-mockup">
+                <img src="img/PUBLICIDAD2.png" alt="Mockup de Laptops">
+            </div>
+        </div>
+
+    </div>
+    
+    <button class="slider-nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+    <button class="slider-nav-btn next"><i class="fas fa-chevron-right"></i></button>
+
+    <div class="slider-indicators">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<main>
+    </section>
         <section id="productos" class="catalogo">
-            <h2>Catálogo de Productos</h2>
+            <h2>CATÁLOGO DE PRODUCTOS</h2>
             <div id="productos-grid" class="catalogo-grid">
                 </div>
         </section>
@@ -118,12 +182,11 @@
                 <p id="form-message" class="form-message"></p>
             </form>
         </section>
-    </main>
+</main>
 
-    <footer>
-        <p>&copy; 2025 TechStore Pro. Inspirado en el futuro de la tecnología.</p>
-    </footer>
-
-    <script src="js/scripts.js"></script>
+<footer>
+    <p>&copy; 2025 TechStore Pro. Inspirado en el futuro de la tecnología.</p>
+</footer>
+<script src="js/scripts.js"></script>
 </body>
 </html>
