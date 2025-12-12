@@ -1,0 +1,801 @@
+/* ====================================================================
+    🎨 1. VARIABLES GLOBALES (PALETA FRESCA Y MODERNA)
+==================================================================== */
+:root {
+    /* -- COLORES DE ACENTO -- */
+    --color-primary: #007bff;       /* Azul Principal (Confianza/Profesional) */
+    --color-primary-hover: #0056b3; 
+    --color-secondary: #20c997;     /* Turquesa/Menta (Fresco y Acogedor) */
+    --color-secondary-hover: #17a97e;
+    --color-accent: #fd7e14;        /* Coral/Naranja Brillante (Para precios/alertas) */
+
+    /* -- COLORES DE SUPERFICIE -- */
+    --bg-main: #f8f9fa;             /* Fondo principal muy claro (gris pálido) */
+    --bg-surface: #ffffff;          /* Fondo de tarjetas/Header (Blanco puro) */
+    --color-border: #e9ecef;        /* Bordes suaves */
+    
+    /* -- COLORES DE TEXTO -- */
+    --color-text: #212529;          /* Texto principal oscuro */
+    --color-text-secondary: #6c757d;/* Texto secundario gris */
+
+    /* -- COLORES DE ESTADO -- */
+    --color-success: #28a745;
+    --color-error: #dc3545;
+
+    /* -- SOMBRAS Y DIMENSIONES -- */
+    --shadow-base: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.18);
+    --radius: 12px;
+    --transition-speed: 0.4s;
+    --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ====================================================================
+    ⭐ 2. BASE (RESET Y GENERAL)
+    (Se mantienen los estilos base ya que eran correctos)
+==================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--bg-main);
+    transition: background-color var(--transition-speed);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 30px auto;
+    padding: 0 25px;
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-text);
+}
+
+/* ====================================================================
+    🚀 3. HEADER Y NAVEGACIÓN
+==================================================================== */
+header {
+    background-color: var(--bg-surface);
+    padding: 18px 0;
+    box-shadow: var(--shadow-base);
+    border-bottom: 2px solid var(--color-primary); /* Borde Azul */
+    position: sticky;
+    top: 0;
+    z-index: 500;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+nav h1 {
+    font-size: 2em;
+    color: var(--color-primary); /* Logo en Azul */
+    font-weight: 800;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: var(--color-text-secondary); /* Enlaces en gris */
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: var(--radius);
+    transition: all var(--transition-speed) ease;
+    font-weight: 500;
+    position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--color-primary); /* Texto Azul al hacer hover */
+    background-color: transparent;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+
+/* ====================================================================
+    4. BOTONES (Contraste visual limpio)
+==================================================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1em;
+    transition: all var(--transition-speed) ease;
+    transform: translateZ(0);
+}
+
+.btn.primary {
+    background-color: var(--color-primary); /* Fondo Azul */
+    color: #fff;
+    box-shadow: var(--shadow-medium);
+}
+
+.btn.primary:hover {
+    background-color: var(--color-primary-hover);
+    box-shadow: 0 12px 20px rgba(0, 123, 255, 0.4); /* Sombra de color Azul */
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background-color: var(--color-secondary); /* Fondo Turquesa */
+    color: var(--color-text); /* Texto oscuro para alto contraste */
+    box-shadow: var(--shadow-base);
+}
+
+.btn.secondary:hover {
+    background-color: var(--color-secondary-hover);
+    box-shadow: 0 8px 15px rgba(32, 201, 151, 0.3); /* Sombra de color Turquesa */
+    transform: translateY(-1px);
+}
+
+.btn.accent { 
+    background-color: var(--color-accent); /* Fondo Coral/Naranja */
+    color: #fff;
+    box-shadow: var(--shadow-base);
+}
+
+.btn.accent:hover {
+    background-color: #e66a00;
+    box-shadow: 0 8px 15px rgba(253, 126, 20, 0.3);
+    transform: translateY(-1px);
+}
+
+
+/* ====================================================================
+    5. HERO
+==================================================================== */
+.hero {
+    background-color: var(--bg-surface);
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: var(--radius);
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-medium);
+    border-top: 5px solid var(--color-secondary); /* Borde de acento Turquesa */
+}
+
+.hero h2 {
+    color: var(--color-primary); /* Título en Azul */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: 900;
+}
+
+.hero p {
+    color: var(--color-text-secondary);
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+/* ====================================================================
+    6. CATÁLOGO DE PRODUCTOS (CARDS)
+==================================================================== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--color-border); /* Borde sutil */
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-base);
+    transition: all var(--transition-speed) ease;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 4px);
+    margin-bottom: 15px;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h4 {
+    color: var(--color-text); 
+    margin-bottom: 10px;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.product-card p {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    color: var(--color-text-secondary);
+    flex-grow: 1;
+}
+
+.product-card .price {
+    font-size: 1.4em;
+    font-weight: 800;
+    color: var(--color-accent); /* Precio en Coral/Naranja */
+    margin-bottom: 15px;
+}
+
+/* ====================================================================
+    7. TABLA DE PRODUCTOS
+==================================================================== */
+#product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 35px;
+    background-color: var(--bg-surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-base);
+}
+
+#product-table th,
+#product-table td {
+    border: none; 
+    padding: 15px;
+    text-align: left;
+}
+
+#product-table th {
+    background-color: var(--color-primary); /* Cabecera en Azul */
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+#product-table tbody tr:nth-child(even) {
+    background-color: var(--bg-main); /* Filas pares con fondo principal */
+}
+
+#product-table tbody tr:hover {
+    background-color: #e9f5ff; /* Hover de Azul muy claro */
+    transition: background-color 0.3s ease;
+}
+
+/* ====================================================================
+    8. FORMULARIO DE CONTACTO
+==================================================================== */
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: var(--bg-surface);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-medium);
+    border-left: 5px solid var(--color-secondary); /* Borde de acento Turquesa */
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--color-primary); /* Labels en Azul */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 1em;
+    color: var(--color-text);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-secondary); /* Foco en Turquesa */
+    box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.3); /* Sombra de foco Turquesa */
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.error-message {
+    color: var(--color-error);
+    font-size: 0.9em;
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+.status-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: var(--radius);
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid;
+}
+
+.status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+/* ====================================================================
+    9. FOOTER
+==================================================================== */
+footer {
+    background-color: var(--color-text); /* Fondo del footer en el color del texto principal (gris muy oscuro) */
+    color: #f8f9fa;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+    font-size: 0.95em;
+    border-top: 3px solid var(--color-secondary); /* Borde Turquesa */
+}
+
+/* ====================================================================
+    10. MODAL CARRITO
+==================================================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: var(--bg-surface);
+    margin: 6% auto;
+    padding: 30px;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 550px;
+    position: relative;
+    animation: animatetop var(--transition-speed) ease-out;
+    box-shadow: var(--shadow-hover);
+}
+
+@keyframes animatetop {
+    from {top: -100px; opacity: 0;}
+    to {top: 0; opacity: 1;}
+}
+
+.close-button {
+    color: var(--color-error);
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 32px;
+    font-weight: 300;
+    transition: color 0.2s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+/* ====================================================================
+    11. CARRITO
+==================================================================== */
+#cart-items {
+    margin: 20px 0;
+    max-height: 350px;
+    overflow-y: auto;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 15px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px dashed var(--color-border);
+}
+
+.cart-item:first-child {
+    border-top: none;
+}
+
+.cart-total {
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-top: 15px;
+    text-align: right;
+    color: var(--color-primary); /* Total en Azul */
+}
+
+#checkout-button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* ====================================================================
+    12. MEDIA QUERIES (Tabla responsiva)
+==================================================================== */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+}
+
+/* Adaptación de tabla para móvil */
+@media (max-width: 576px) {
+    #product-table, #product-table thead, #product-table tbody, #product-table th, #product-table td, #product-table tr {
+        display: block;
+    }
+    #product-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    #product-table td {
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+        border: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+    #product-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        font-weight: 700; /* Más audaz para contraste */
+        text-align: left;
+        color: var(--color-secondary); /* Etiquetas en Turquesa */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====================================================================
+    REFINAMIENTO GLOBAL Y TIPOGRAFÍA
+==================================================================== */
+
+:root {
+    /* (Asegúrate de mantener las variables anteriores, especialmente --color-primary, --color-secondary, --radius, --shadow-medium) */
+    --font-family-title: 'Poppins', sans-serif; /* Fuente más moderna para títulos */
+    --font-family-base: 'Inter', sans-serif;
+}
+
+/* Ajustes a los títulos para un look más moderno */
+h2 {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-secondary); /* Línea de acento */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Párrafo descriptivo debajo de los títulos de sección */
+.section-description {
+    font-size: 1.1em;
+    color: var(--color-text-secondary);
+    margin-bottom: 50px;
+    max-width: 800px;
+    text-align: center; /* Centramos el texto si el título está centrado */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ====================================================================
+    SECCIÓN: HERO (VIDEO O BANNER PRINCIPAL)
+==================================================================== */
+
+/* (Asumimos que los estilos de hero-video-container están correctos y fijos) */
+
+.contenido-superpuesto {
+    /* Mejoramos el contraste del texto sobre el video */
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); 
+}
+
+.hero-title {
+    font-family: var(--font-family-title);
+    font-size: 4.5em; /* Título más grande e impactante */
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.4em;
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.highlight-text {
+    color: var(--color-secondary); /* El turquesa resalta genial en el fondo oscuro */
+}
+
+
+/* ====================================================================
+    SECCIÓN: HERO-AD-BANNER (Bienvenida con tu imagen PUBLICIDAD3.png)
+==================================================================== */
+
+.hero-ad-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px; /* Más espacio entre el texto y la imagen */
+    padding: 80px 0;
+    margin-bottom: 60px;
+    background-color: var(--bg-surface); /* Fondo blanco para aislar la sección */
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-base);
+}
+
+.hero-ad-banner .hero-content {
+    max-width: 45%;
+    padding-left: 30px; /* Ajuste si no está usando todo el padding del container */
+}
+
+.hero-ad-banner h2 {
+    font-size: 3em;
+    color: var(--color-primary);
+    border-bottom: none; /* Quitamos la línea aquí para un look más limpio */
+    margin-bottom: 15px;
+}
+
+.hero-ad-banner p {
+    font-size: 1.2em;
+    color: var(--color-text-secondary);
+    margin-bottom: 30px;
+}
+
+.hero-ad-banner .hero-image {
+    max-width: 55%;
+    padding-right: 30px; /* Ajuste para el lado derecho */
+}
+
+.responsive-ad-image {
+    width: 100%;
+    max-height: 450px; /* Imagen un poco más alta */
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Rebote suave */
+}
+
+.responsive-ad-image:hover {
+    transform: scale(1.03); /* Elevación más notable */
+}
+
+
+/* ====================================================================
+    SECCIÓN: FEATURED PRODUCTS (DESTACADOS)
+==================================================================== */
+
+#featured-products {
+    padding: 40px 0;
+    text-align: center; /* Centramos el título y la descripción */
+}
+
+/* --- Banner dentro de Destacados --- */
+.featured-banner-image {
+    width: 100%;
+    margin: 40px auto 50px; /* Espacio más generoso */
+    border-radius: 18px; /* Bordes más redondeados */
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    border: 5px solid var(--color-secondary); /* Borde de acento más grueso */
+    transition: transform 0.4s var(--easing);
+}
+
+.featured-banner-image:hover {
+    transform: scale(1.005); /* Zoom sutil en hover */
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+.featured-banner-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* ====================================================================
+    SECCIÓN: PROMO BANNER (Envío Gratis)
+==================================================================== */
+
+.promo-banner {
+    /* Fondo con gradiente sutil y moderno */
+    background: linear-gradient(90deg, #e9f5ff 0%, var(--bg-surface) 100%); 
+    padding: 50px 30px;
+    margin: 60px 0 80px;
+    border-radius: 18px; 
+    text-align: center;
+    box-shadow: var(--shadow-medium);
+    border: 1px solid var(--color-border);
+}
+
+.promo-banner h3 {
+    font-size: 2.5em;
+    color: var(--color-primary-hover); 
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.promo-banner p {
+    font-size: 1.2em;
+    color: var(--color-text-secondary);
+    margin-bottom: 30px;
+}
+
+.promo-banner .btn.accent {
+    /* Aseguramos que el botón destaque */
+    box-shadow: 0 8px 20px rgba(253, 126, 20, 0.4);
+}
+
+
+/* ====================================================================
+    MEDIA QUERIES (Ajustes responsivos)
+==================================================================== */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 3.5em;
+    }
+    .hero-ad-banner {
+        flex-direction: column;
+    }
+    .hero-ad-banner .hero-content,
+    .hero-ad-banner .hero-image {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .hero-ad-banner .hero-content {
+        order: 2; 
+    }
+    .hero-ad-banner .hero-image {
+        order: 1; 
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.5em;
+    }
+    .hero-ad-banner h2 {
+        font-size: 2em;
+    }
+    .promo-banner h3 {
+        font-size: 1.8em;
+    }
+}

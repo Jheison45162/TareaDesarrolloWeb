@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | Catálogo de Productos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>TechStore</h1>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html" class="active">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="#" id="cart-button">🛒 Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Catálogo Completo de Productos</h2>
+
+        <section>
+            <div class="product-grid" id="product-card-list">
+                </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Productos en Tabla</h3>
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Descripción</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+        </main>
+
+    <footer>
+        <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>🛒 Tu Carrito de Compras</h3>
+            <div id="cart-items">
+                <p>El carrito está vacío.</p>
+            </div>
+            <p class="cart-total">Subtotal: <span id="cart-subtotal">$0.00</span></p>
+            <button class="btn primary" id="checkout-button">Pagar</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

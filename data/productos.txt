@@ -1,0 +1,19 @@
+1,Laptop HP Pavilion Core i5 16GB,1250.99,Laptop de alto rendimiento ideal para estudio y trabajo.,1,img/1.jpg
+2,Acer Nitro 5 (i7/RTX 3050),1899.00,Laptop gamer potente con gráficos dedicados.,1,img/2.jpg
+3,Lenovo Yoga C940 14'' Convertible,850.50,Laptop convertible ligera ideal para productividad.,0,img/3.jpg
+
+4,Samsung Galaxy S24 Ultra 256GB,999.00,Smartphone premium con cámara avanzada.,1,img/4.jpg
+5,Xiaomi Redmi Note 13 Pro,299.00,Smartphone equilibrado con excelente rendimiento-precio.,0,img/5.jpg
+6,Apple Watch Series 9 GPS 45mm,399.00,Reloj inteligente con funciones avanzadas de salud.,0,img/6.jpg
+
+7,Monitor LG UltraGear Curvo 2K 144Hz,499.99,Monitor gamer curvo con alta tasa de refresco.,1,img/7.jpg
+8,Samsung ViewFinity S8 27'' UHD,350.00,Monitor profesional con resolución 4K UHD.,0,img/8.jpg
+9,ASUS ZenScreen Portátil USB-C,180.00,Monitor portátil ideal para trabajo remoto.,0,img/9.jpg
+
+10,Sony WH-1000XM5 Audífonos ANC,189.50,Audífonos premium con cancelación activa de ruido.,1,img/10.jpg
+11,JBL Flip 6 Altavoz Portable,75.00,Parlante portátil resistente y potente.,0,img/11.jpg
+12,Xiaomi Buds 4 Pro Inalámbricos,45.00,Auriculares inalámbricos con gran calidad de sonido.,0,img/12.jpg
+
+13,Logitech G Pro Teclado Mecánico,149.00,Teclado mecánico profesional para gamers.,1,img/13.jpg
+14,Razer Viper V2 Pro Mouse Wireless,75.00,Mouse gamer inalámbrico ultraligero.,0,img/14.jpg
+15,SSD Kingston NV2 2TB NVMe,159.00,Unidad NVMe de alto rendimiento.,1,img/15.jpg

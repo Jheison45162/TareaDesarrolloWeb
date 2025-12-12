@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | Quiénes Somos y Nuestra Visión</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/scripts.js"></script>
+</head>
+<body>
+    
+    <header class="header-nav">
+        <nav class="container">
+            <h1>TechStore</h1>
+            <ul>
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="productos.html" class="nav-link">Productos</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="about.html" class="nav-link active">Nosotros</a></li>
+                <li><a href="#" id="cart-button" class="btn accent">🛒 Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero static-hero">
+            <div class="container hero-content-inner">
+                <h1 class="hero-title">Impulsando el Mañana. <span class="highlight-text">Nuestra Historia</span>.</h1>
+                <p class="hero-subtitle">Desde 2020, hemos conectado a miles de clientes con la tecnología que cambia vidas. Conoce el equipo detrás de la innovación.</p>
+                <a href="#mision-vision" class="btn primary btn-large">Descubre Nuestros Valores</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <section id="mision-vision" class="mvv-section">
+                <h2 class="section-heading">Nuestra Identidad</h2>
+                <p class="section-description">Guiados por la **innovación** y la **confianza**, buscamos ser más que una tienda, queremos ser tu socio tecnológico.</p>
+
+                <div class="mvv-grid">
+                    <div class="mvv-card primary">
+                        <i class="icon-rocket">🚀</i> 
+                        <h3>Misión</h3>
+                        <p>Ser el **e-commerce de referencia** en productos tecnológicos, destacando por nuestro servicio al cliente y precios justos, acercando la última generación tecnológica a todos.</p>
+                    </div>
+
+                    <div class="mvv-card secondary">
+                        <i class="icon-globe">🌎</i>
+                        <h3>Visión</h3>
+                        <p>Expandirnos a nivel global, manteniendo nuestro compromiso con la **sostenibilidad digital** y ofreciendo siempre las soluciones más vanguardistas del mercado.</p>
+                    </div>
+
+                    <div class="mvv-card accent">
+                        <i class="icon-star">✨</i>
+                        <h3>Valores Clave</h3>
+                        <ul>
+                            <li>**Innovación:** Continuo aprendizaje.</li>
+                            <li>**Confianza:** Transparencia total.</li>
+                            <li>**Calidad:** Estándares rigurosos.</li>
+                            <li>**Compromiso:** Satisfacción garantizada.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="our-team">
+                <h2 class="section-heading">Conoce a Nuestro Equipo</h2>
+                <p class="section-description">Nuestra pasión es la tecnología, y nuestro motor es el talento humano. Ellos hacen posible la magia.</p>
+                
+                <div class="team-grid">
+                    <div class="team-member-card">
+                        <img src="img/team-ceo.jpg" alt="Foto del CEO" class="team-photo">
+                        <h4>Ana García</h4>
+                        <p class="member-role">CEO y Fundadora</p>
+                        <p class="member-bio">Visionaria en tecnología y líder de nuestra expansión. "La innovación es nuestro ADN."</p>
+                    </div>
+                    <div class="team-member-card">
+                        <img src="img/team-tech.jpg" alt="Foto del CTO" class="team-photo">
+                        <h4>Javier Solís</h4>
+                        <p class="member-role">Director de Tecnología (CTO)</p>
+                        <p class="member-bio">Experto en soluciones digitales y arquitectura de sistemas de e-commerce.</p>
+                    </div>
+                    <div class="team-member-card">
+                        <img src="img/team-marketing.jpg" alt="Foto de Marketing" class="team-photo">
+                        <h4>Marta López</h4>
+                        <p class="member-role">Jefa de Marketing Digital</p>
+                        <p class="member-bio">Encargada de conectar la marca con nuestros clientes a través de estrategias creativas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-banner">
+                <h3>¿Listo para el Futuro?</h3>
+                <p>Únete a la comunidad TechStore y experimenta la diferencia. ¡Tu próxima gran compra te espera!</p>
+                <a href="productos.html" class="btn accent btn-large">Ver Catálogo Completo</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>🛒 Tu Carrito de Compras</h3>
+            <div id="cart-items">
+                <p>El carrito está vacío.</p>
+            </div>
+            <p class="cart-total">Subtotal: <span id="cart-subtotal">$0.00</span></p>
+            <button class="btn primary" id="checkout-button">Pagar</button>
+        </div>
+    </div>
+</body>
+</html>

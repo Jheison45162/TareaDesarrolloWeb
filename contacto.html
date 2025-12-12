@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | Contacto y Soporte</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/scripts.js"></script>
+</head>
+<body>
+    <header class="header-nav">
+        <nav class="container">
+            <h1>TechStore</h1>
+            <ul>
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="productos.html" class="nav-link">Productos</a></li>
+                <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+                <li><a href="about.html" class="nav-link">Nosotros</a></li>
+                <li><a href="#" id="cart-button" class="btn accent">🛒 Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <h2 class="section-heading-contact">Estamos aquí para ayudarte 💬</h2>
+        <p class="section-description-contact">Elige el método de contacto que prefieras. Nuestro equipo de soporte responderá a tu solicitud en menos de 24 horas.</p>
+
+        <div class="contact-layout">
+            
+            <section class="contact-form-section">
+                <h3>Envíanos un Mensaje Directo</h3>
+                <form id="contact-form" class="contact-form">
+                    
+                    <div class="form-group">
+                        <label for="name" class="form-group__label">Nombre Completo:</label>
+                        <input type="text" id="name" name="name" class="form-group__control" required minlength="3">
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-group__label">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" class="form-group__control" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-group__label">Asunto:</label>
+                        <select id="subject" name="subject" class="form-group__control" required>
+                            <option value="">-- Selecciona un Asunto --</option>
+                            <option value="Consulta General">Consulta General</option>
+                            <option value="Soporte Técnico">Soporte Técnico</option>
+                            <option value="Información de Pedido">Información de Pedido</option>
+                            <option value="Devoluciones/Garantía">Devoluciones/Garantía</option>
+                        </select>
+                        <span class="error-message" id="subject-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-group__label">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" class="form-group__control" required minlength="10"></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+
+                    <button type="submit" class="btn primary btn-large">Enviar Mensaje</button>
+                    <p id="form-status" class="status-message"></p>
+                </form>
+            </section>
+
+            <aside class="contact-info-aside">
+                
+                <div class="info-card">
+                    <h4>Datos de Contacto</h4>
+                    <ul class="contact-list">
+                        <li><i class="icon-phone">📞</i> <a href="tel:+1234567890" class="contact-link">+1 (234) 567-890</a></li>
+                        <li><i class="icon-mail">📧</i> <a href="mailto:soporte@techstore.com" class="contact-link">soporte@techstore.com</a></li>
+                        <li><i class="icon-clock">🕒</i> Lunes a Viernes: 9:00 - 18:00 (EST)</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card map-card">
+                    <h4>Nuestra Ubicación Central</h4>
+                    <p>TechStore Sede Central</p>
+                    <p>Av. Innovación 456, Distrito Tecnológico, Ciudad Global, 10001</p>
+                    
+                    <div class="map-embed">
+                        
+                    </div>
+                    <a href="https://maps.google.com/?q=Av+Innovación+456" target="_blank" class="btn secondary btn-small">Ver en Google Maps</a>
+                </div>
+            </aside>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>🛒 Tu Carrito de Compras</h3>
+            <div id="cart-items">
+                <p>El carrito está vacío.</p>
+            </div>
+            <p class="cart-total">Subtotal: <span id="cart-subtotal">$0.00</span></p>
+            <button class="btn primary" id="checkout-button">Pagar</button>
+        </div>
+    </div>
+</body>
+</html>

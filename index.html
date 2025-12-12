@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | Inicio - El Futuro Digital</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/scripts.js"></script>
+</head>
+<body>
+    
+    <header class="header-nav">
+        <nav class="container">
+            <h1>TechStore</h1>
+            <ul>
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="productos.html" class="nav-link">Productos</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="about.html" class="nav-link">Nosotros</a></li>
+                <li><a href="#" id="cart-button" class="btn accent">🛒 Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-video-container">
+        <video playsinline autoplay muted loop poster="videos/poster.jpg" id="video-fondo">
+            <source src="videos/mi-video.mp4" type="video/mp4">
+            <source src="videos/mi-video.webm" type="video/webm">
+            Tu navegador no soporta el video de fondo.
+        </video>
+        
+        <div class="capa-oscura"></div> 
+        
+        <div class="contenido-superpuesto">
+            <h1 class="hero-title">El Futuro es AHORA. <span class="highlight-text">Potencia tu Mundo</span>.</h1>
+            <p class="hero-subtitle">Descubre la tecnología de vanguardia que redefine los límites de la innovación.</p>
+            
+            <div class="hero-actions">
+                <a href="productos.html" class="btn primary btn-large">EXPLORA OFERTAS HOY</a>
+                <a href="about.html" class="btn secondary btn-large">Conoce Nuestro Propósito</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <section class="hero-ad-banner">
+            <div class="hero-content">
+                <h2>Bienvenido a TechStore</h2>
+                <p>Tu mejor fuente de tecnología de vanguardia. ¡Descubre nuestras ofertas exclusivas!</p>
+                <a href="productos.html" class="btn primary">Ver Catálogo</a>
+            </div>
+            <div class="hero-image">
+                <a href="productos.html" title="Ver Ofertas Especiales">
+                    <img src="img/PUBLICIDAD3.png" alt="Tecnología de Vanguardia" class="responsive-ad-image">
+                </a>
+            </div>
+        </section>
+
+
+        <section id="featured-products">
+            <h2>Productos Destacados de la Semana 🌟</h2>
+            <p class="section-description">La selección más popular e innovadora elegida por nuestros expertos.</p>
+
+           
+            
+            <div class="product-grid" id="featured-list">
+                </div>
+        </section>
+        
+        <section class="promo-banner">
+            <div class="promo-content">
+                <h3>¡24 Horas de Envío GRATIS!</h3>
+                <p>No pierdas la oportunidad. Oferta válida hasta la medianoche.</p>
+                <a href="productos.html" class="btn accent">COMPRAR AHORA</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>🛒 Tu Carrito de Compras</h3>
+            <div id="cart-items">
+                <p>El carrito está vacío.</p>
+            </div>
+            <p class="cart-total">Subtotal: <span id="cart-subtotal">$0.00</span></p>
+            <button class="btn primary" id="checkout-button">Pagar</button>
+        </div>
+    </div>
+</body>
+</html>
